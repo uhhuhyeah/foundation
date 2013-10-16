@@ -9,7 +9,7 @@ $custom-form-border-size: 1px !default;
 $custom-form-bg: #fff !default;
 $custom-form-bg-disabled: #ddd !default;
 $custom-form-input-size: 16px !default;
-$custom-form-check-color: #222 !default;
+$custom-form-check-color: #333 !default;
 $custom-form-check-size: 16px !default;
 $custom-form-radio-size: 8px !default;
 $custom-form-checkbox-radius: 0 !default;
@@ -19,7 +19,7 @@ $custom-select-bg: #fff !default;
 $custom-select-fade-to-color: #f3f3f3 !default;
 $custom-select-border-color: #ddd !default;
 $custom-select-triangle-color: #aaa !default;
-$custom-select-triangle-color-open: #222 !default;
+$custom-select-triangle-color-open: #bbb !default;
 $custom-select-height: em-calc(13) + ($form-spacing * 1.5) !default;
 $custom-select-margin-bottom: em-calc(20) !default;
 $custom-select-font-color-selected: #141414 !default;
@@ -33,7 +33,7 @@ $custom-dropdown-border-width: 1px !default;
 $custom-dropdown-border-style: solid !default;
 $custom-dropdown-font-color: #555 !default;
 $custom-dropdown-font-size: em-calc(14) !default;
-$custom-dropdown-color-selected: #eeeeee !default;
+$custom-dropdown-color-selected: #f5f5f5 !default;
 $custom-dropdown-font-color-selected: #000 !default;
 $custom-dropdown-shadow: 0 2px 2px 0 rgba(0,0,0,0.1) !default;
 $custom-dropdown-offset-top: auto !default;
@@ -79,6 +79,7 @@ $custom-dropdown-width-large: 434px !default;
       vertical-align: middle;
       border: solid $custom-form-border-size $custom-form-border-color;
       background: $custom-form-bg;
+      margin-right: .35em;
 
       &.checkbox {
         @include custom-form-input($radius:$custom-form-checkbox-radius, $mark-size:$custom-form-check-size);
@@ -140,7 +141,7 @@ $custom-dropdown-width-large: 434px !default;
         background: -webkit-linear-gradient(top, $custom-dropdown-bg 0%,$custom-select-fade-to-color 100%);
         -webkit-box-shadow: none;
       }
-      background: linear-gradient(to bottom, $custom-dropdown-bg 0%,$custom-select-fade-to-color 100%);
+      background: #eee; /* linear-gradient(to bottom, $custom-dropdown-bg 0%,$custom-select-fade-to-color 100%); */
       box-shadow: none;
       font-size: $custom-dropdown-font-size;
       vertical-align: top;
@@ -239,6 +240,7 @@ $custom-dropdown-width-large: 434px !default;
       background: $custom-dropdown-bg;
       border: $custom-dropdown-border-style $custom-dropdown-border-width $custom-dropdown-border-color;
       font-size: $em-base;
+      margin-top: -1px;
 
       li {
         color: $custom-dropdown-font-color;
@@ -259,7 +261,7 @@ $custom-dropdown-width-large: 434px !default;
           color: $custom-dropdown-font-color-selected;
         }
         &:hover {
-          background-color: darken($custom-dropdown-color-selected, 4%);
+          background-color: $custom-dropdown-color-selected;
           color: $custom-dropdown-font-color-selected;
         }
         &.selected:hover {
