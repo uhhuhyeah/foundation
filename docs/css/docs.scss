@@ -151,7 +151,7 @@ footer.row.full-width {
   float: $default-float;
 }
 
-.docs.section-container a.active { font-weight: bold; }
+.docs.section-container a.active { font-weight: normal; font-family: $side-nav-active-font-family; }
 
 
 /* Alert Docs */
