@@ -1,5 +1,5 @@
 //
-// Custom Form Variables
+// @Variables
 //
 $include-html-custom-form-classes: $include-html-classes !default;
 
@@ -48,6 +48,12 @@ $custom-dropdown-width-large: 434px !default;
 // We decided not to make a mixin for the custom forms because
 // they rely on a very specific class naming structure.
 // We may look at updating this in the future.
+
+// @MIXIN
+//
+// $radius - Custom form input radius - Default: 0px.
+// $mark-size - ?? - Default: 0px.
+
 @mixin custom-form-input($radius:0px, $mark-size:0px) {
   @include radius($radius);
   $custom-form-input-padding: (($custom-form-input-size - $mark-size) / 2) - $custom-form-border-size;
