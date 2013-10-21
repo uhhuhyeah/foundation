@@ -1,9 +1,17 @@
 @import "foundation";
-@import "compass/css3";
+//@import "compass/css3";
+@mixin box-shadow(
   $shadow-1 : default,
   $shadow-2 : false,
   $shadow-3 : false,
-
+  $shadow-4 : false,
+  $shadow-5 : false,
+  $shadow-6 : false,
+  $shadow-7 : false,
+  $shadow-8 : false,
+  $shadow-9 : false,
+  $shadow-10: false
+) {}
 
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -19,6 +27,7 @@ body {
 
 
 // Docs Styles
+
 
 .section-header {
   padding: 24px 0;
@@ -37,9 +46,12 @@ footer { margin-top: 45px; }
 
 
 
+
 #appHeader { background: $primary-color; }
+
 
 
 #appHeader a.sidebar-button span {
   @include box-shadow(-15px 0 2px #fff, -6px 0 2px #fff, 3px 0 2px #fff);
 }
+
