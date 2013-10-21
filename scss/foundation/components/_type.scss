@@ -383,7 +383,10 @@ $microformat-abbr-font-decoration: none !default;
     .print-only { display: none !important; }
     @media print {
       * {
-        background: transparent !important;
+        /*
+          turning this off so that table striping appears on tables in print
+          background: transparent !important;
+        */
         color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
